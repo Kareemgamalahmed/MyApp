@@ -9,6 +9,9 @@ from helpers import apology, login_required, lookup, usd
 
 # Configure application
 app = Flask(__name__)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Use the port from the environment
+    app.run(host="0.0.0.0", port=port)
 
 # Custom filter
 app.jinja_env.filters["usd"] = usd
