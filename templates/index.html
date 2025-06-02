@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+<h1> HOME PAGE </h1>
+
+<table>
+    <tr><th>BALANCE</th></tr>
+    <tr><th>{{ BALANCE }}</th></tr>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th>STOCK</th>
+            <th>NUMBER</th>
+            <th>COST</th>
+            <th>DATE OF BUYING</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td> {{ row.stock }} </td>
+            <td> {{ row.nr }} </td>
+            <td> {{ row.cost }} </td>
+            <td> {{ row.date }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

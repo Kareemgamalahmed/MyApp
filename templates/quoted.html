@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quoted" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="name" placeholder="name" value="{{ name }}" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="price" placeholder="price" value="{{ price }}" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="symbol" value="{{ symbol }}" type="text">
+        </div>
+
+    </form>
+{% endblock %}
